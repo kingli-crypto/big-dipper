@@ -95,7 +95,7 @@ Meteor.methods({
                 }
 
                 if ( Coin.StakingCoin.denom ) {
-                    url = LCD + '/supply/total/'+ Coin.StakingCoin.denom;
+                    url = LCD + '/cosmos/bank/v1beta1/supply/'+ Coin.StakingCoin.denom;
                     try{
                         response = HTTP.get(url);
                         let supply = JSON.parse(response.content).result;
